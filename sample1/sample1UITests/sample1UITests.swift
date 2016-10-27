@@ -29,8 +29,22 @@ class sample1UITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+
+        let lhsTextField = app.textFields["lhsTextField"]
+        let rhsTextField = app.textFields["rhsTextField"]
+        let calculateButton = app.buttons["calculateButton"]
+        let resultLabel = app.staticTexts["resultLabel"]
+        
+        lhsTextField.tap()
+        lhsTextField.typeText("6")
+        
+        rhsTextField.tap()
+        rhsTextField.typeText("7")
+
+        calculateButton.tap()
+        
+        XCTAssertTrue(resultLabel.label == "13")
     }
     
 }

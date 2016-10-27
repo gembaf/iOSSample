@@ -19,6 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mYY-Dh-LHH">
+                                <accessibility key="accessibilityConfiguration" identifier="lhsTextField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="kJP-AJ-AlG"/>
                                 </constraints>
@@ -27,6 +28,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NxD-Ci-GaW">
+                                <accessibility key="accessibilityConfiguration" identifier="rhsTextField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="wqM-i4-lTD"/>
                                 </constraints>
@@ -36,6 +38,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cd-Ya-tRt">
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="calculateButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="C1W-WC-DrG"/>
                                 </constraints>
@@ -47,6 +50,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdE-CH-f21">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="resultLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="g2q-dC-pL5"/>
                                     <constraint firstAttribute="height" constant="30" id="vAK-P2-byA"/>
