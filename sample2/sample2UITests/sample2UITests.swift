@@ -28,9 +28,12 @@ class sample2UITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // トップページにアクセスした場合
+    func testTopPage() {
+        let app = XCUIApplication()
+        let page1TitleLabel = app.staticTexts["page1TitleLabel"]
+        
+        // Page1と表示されていること
+        XCTAssertTrue(page1TitleLabel.label == "Page1")
     }
-    
 }
