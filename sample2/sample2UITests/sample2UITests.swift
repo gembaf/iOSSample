@@ -9,7 +9,9 @@
 import XCTest
 
 class sample2UITests: XCTestCase {
-        
+    
+    var app = XCUIApplication()
+    
     override func setUp() {
         super.setUp()
         
@@ -30,10 +32,20 @@ class sample2UITests: XCTestCase {
     
     // トップページにアクセスした場合
     func testTopPage() {
-        let app = XCUIApplication()
         let page1TitleLabel = app.staticTexts["page1TitleLabel"]
         
         // Page1と表示されていること
         XCTAssertTrue(page1TitleLabel.label == "Page1")
+    }
+    
+    // ページ遷移ボタンを押した場合
+    func testNextPageButton() {
+        let toPage2Button = app.buttons["toPage2Button"]
+        let page2TitleLabel = app.staticTexts["page2TitleLabel"]
+        
+        toPage2Button.tap()
+        
+        // 次のページへ遷移していること
+        XCTAssertTrue(page2TitleLabel.label == "Page2")
     }
 }
