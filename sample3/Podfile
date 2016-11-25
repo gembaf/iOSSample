@@ -6,7 +6,7 @@ target 'sample3' do
   use_frameworks!
 
   # Pods for sample3
-  pod 'Realm'
+  pod 'RealmSwift'
 
   target 'sample3Tests' do
     inherit! :search_paths
