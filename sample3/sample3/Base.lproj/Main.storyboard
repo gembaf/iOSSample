@@ -23,6 +23,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TopPage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwM-bb-wv7">
                                 <rect key="frame" x="87.5" y="120" width="200" height="400"/>
+                                <accessibility key="accessibilityConfiguration" identifier="mainLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="GYv-iI-UgT"/>
                                     <constraint firstAttribute="width" constant="200" id="Xih-7f-Wg9"/>

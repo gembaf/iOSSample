@@ -28,9 +28,12 @@ class sample3UITests: XCTestCase {
         super.tearDown()
     }
     
+    // トップ画面を表示した場合
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let mainLabel = app.staticTexts["mainLabel"]
+        // ユーザ名(ほげほげ)が1つ以上表示されていること
+        XCTAssertTrue(mainLabel.label.contains("ほげほげ"))
     }
     
 }
