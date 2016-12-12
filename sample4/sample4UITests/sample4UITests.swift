@@ -29,8 +29,11 @@ class sample4UITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let myTextView = app.textViews["myTextView"]
+        let value = myTextView.value as! String
+        // questionという文字列が1つ以上表示されていること
+        XCTAssertTrue(value.contains("question"))
     }
     
 }
