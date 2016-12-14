@@ -28,9 +28,21 @@ class sample5UITests: XCTestCase {
         super.tearDown()
     }
     
+    // アプリを起動した直後
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let myTextView = app.textViews["myTextView"]
+        let myButton = app.buttons["myButton"]
+
+        // client connectedと表示されていること
+        var value = myTextView.value as! String
+        XCTAssertTrue(value.contains("client connected"))
+
+        // ボタンを押した場合
+        myButton.tap()
+        // button pushedと表示されていること
+        value = myTextView.value as! String
+        XCTAssertTrue(value.contains("button pushed"))
     }
     
 }
